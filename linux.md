@@ -8,10 +8,9 @@
 5. [Deleting, Copying, and Moving Files](#deleting-copying-and-moving-files)
 6. [Redirecting and Piping](#redirecting-and-piping)
 7. [Expansion](#expansion)
+8. [Finding files](#finding-files)
 
 ## File System
-
-### File System Hierarchy Standard (FHS)
 | Directory | Description |
 | --- | --- |
 | `/` | Root directory |
@@ -49,18 +48,34 @@
 - The next middle 3 letters are the group's permissions.
 - The last 3 letters are permissions for others.
 
-### File expansion
+### Chmod
+| Command | Description |
+| --- | --- |
+| `chmod u+x file` | Add execute permission for the owner |
+| `chmod g-w file` | Remove write permission for the group |
+| `chmod o-r file` | Remove read permission for others |
+| `chmod a=r file` | Set read permission for all |
+| permission values | 0 = no permission, 1 = execute, 2 = write, 4 = read |
+| `chmod 755 file` | Set read, write, and execute permissions for the owner. Set read and execute permissions for the group and others. |
 
+## File expansion examples
 | Symbol | Description |
 | --- | --- |
 | `*` | Matches any number of characters |
 | `?` | Matches any single character |
 | `[ ]` | Matches any character within the brackets |
+| `[A-Z]` | Matches any uppercase letter |
+| `[A-E]` | Matches any uppercase letter from A to E |
+| `[a-z]` | Matches any lowercase letter |
+| `[a-z]*` | Matches any lowercase letter followed by anything |
+| `[0-9]` | Matches any digit |
 | `[^ ]` | Matches any character not within the brackets |
-
+| `touch {1,2,3}.txt` | Creates 3 files named 1.txt, 2.txt, and 3.txt |
+| `touch {a..z}.txt` | Creates 26 files named a.txt, b.txt, c.txt, ..., z.txt |
+| `touch {a..z}{1..3}.txt` | Creates 78 files named a1.txt, a2.txt, a3.txt, b1.txt, b2.txt, b3.txt, ..., z1.txt, z2.txt, z3.txt |
+| `touch {Monday,Tuesday,Wednesday}.txt` | Creates 3 files named Monday.txt, Tuesday.txt, and Wednesday.txt |
 
 ## Creating Files and Directories
-
 | Command | Description |
 | --- | --- |
 | `touch file.txt` | Create a new file |
