@@ -9,6 +9,7 @@
 6. [Redirecting and Piping](#redirecting-and-piping)
 7. [Expansion](#expansion)
 8. [Finding files](#finding-files)
+9. [Commands](#commands)
 
 ## File System
 | Directory | Description |
@@ -81,4 +82,23 @@
 | `touch file.txt` | Create a new file |
 | `mkdir directory` | Create a new directory |
 | `mkdir -p directory/subdirectory` | Create a new directory and subdirectory |
+
+## Commands
+
+- [`locate`](#locate)
+
+#### `locate`
+- Find files by name. Finds files in the *whole* of the file system
+- Uses a datababase to find files, the files must be updated
+- `updatedb` - Updates the database used by locate
+
+```bash
+
+
+| Command | Description |
+| --- | --- |
+| `locate` | Find files by name. Finds files in the *whole* of the file system |
+| `updatedb` | Update the database used by locate |
+
+
 
