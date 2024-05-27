@@ -92,8 +92,6 @@
 - Uses a datababase to find files, the files must be updated
 - `updatedb` - Updates the database used by locate
 
-```bash
-
 
 | Command | Description |
 | --- | --- |
