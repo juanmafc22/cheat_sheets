@@ -9,7 +9,8 @@
 6. [Redirecting and Piping](#redirecting-and-piping)
 7. [Expansion](#expansion)
 8. [Finding files](#finding-files)
-9. [Commands](#commands)
+9. [Time stamps](#time-stamps)
+10. [Commands](#commands)
 
 ## File System
 | Directory | Description |
@@ -91,12 +92,6 @@
 - Find files by name. Finds files in the *whole* of the file system
 - Uses a datababase to find files, the files must be updated
 - `updatedb` - Updates the database used by locate
-
-
-| Command | Description |
-| --- | --- |
-| `locate` | Find files by name. Finds files in the *whole* of the file system |
-| `updatedb` | Update the database used by locate |
 
 
 
