@@ -96,4 +96,5 @@
 
 ## Other
 - `printenv` - Print all or part of the environment
+- `PS1` - The primary prompt string
 
