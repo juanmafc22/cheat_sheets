@@ -11,6 +11,7 @@
 8. [Finding files](#finding-files)
 9. [Time stamps](#time-stamps)
 10. [Commands](#commands)
+11. [Other](#other) 
 
 ## File System
 | Directory | Description |
@@ -93,5 +94,6 @@
 - Uses a datababase to find files, the files must be updated
 - `updatedb` - Updates the database used by locate
 
-
+## Other
+- `printenv` - Print all or part of the environment
 
