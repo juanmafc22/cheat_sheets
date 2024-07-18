@@ -85,14 +85,64 @@
 | `mkdir directory` | Create a new directory |
 | `mkdir -p directory/subdirectory` | Create a new directory and subdirectory |
 
-## Commands
+## Permissions files vs directories
+| Permission | File | Directory |
+| --- | --- | --- |
+| `r` | Read the file | Allows files in the directory to be read |
+| `w` | Write to the file | Allows files in the directory to be created, deleted, or renamed |
+| `x` | Execute the file | Allows the access to be directory content |
 
+## Permission categories
+| Symbol | Category |
+| --- | --- |
+| `u` | User |
+| `g` | Group |
+| `o` | Other |
+| `a` | All |
+
+## Changing permissions symbolic notation
+| Symbol | Description |
+| --- | --- |
+| `chmod` | Change file mode bits |
+| `ugoa` | Add permission to user, group, other or all |
+| `+-=` | Add, subtract and set the permission |
+| `rwx` | Set the permission to read, write or execute |
+
+
+## Commands
+- [`chmod`](#chmod)
 - [`locate`](#locate)
+- [`ls`](#ls) 
+- [`tree`](#tree) 
+
+### `chmod`
+- Change file permission bits using symbolic notation
+- `chmod u+x file` - Add execute permission for the owner
+- `chmod g-w file` - Remove write permission for the group
+- `chmod a=rw file` - Set read and write permissions for all
+- `chmod o-r file` - Remove read permission for others
+- `chmod u=rwx, g=rw, o=r file` - Set read, write, and execute permissions for the owner. Set read and write permissions for the group. Set read permissions for others
+- Change the file permission using numeric notation
+- `chmod 755 file` - Set read, write, and execute permissions for the owner. Set read and execute permissions for the group and others.
 
 #### `locate`
 - Find files by name. Finds files in the *whole* of the file system
 - Uses a datababase to find files, the files must be updated
 - `updatedb` - Updates the database used by locate
+
+### `ls`
+- List files and directories
+- `ls -l` - List files in long format
+- `ls -a` - List all files, including hidden files
+- `ls -lh` - List files in long format with human-readable file sizes
+- `ls -R` - List files recursively
+- `ls -t` - List files by modification time
+- `ls -tr` - List files by modification time in reverse order
+
+### `tree`
+- List files and directories in a tree-like format
+- `tree -d` - List directories only
+- `tree -L 2` - List files and directories up to 2 levels deep
 
 ## Other
 - `printenv` - Print all or part of the environment
